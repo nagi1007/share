@@ -1,0 +1,12 @@
+
+################
+##### BOF ######
+################
+
+BOF_unification_war = {
+	
+	allowed = {
+		original_tag = BOF
+	}
+}
+

@@ -1,0 +1,524 @@
+economy_decisions = {
+		private_enterprise_assistance = { #民間企業補助
+		
+		icon = decision_eng_trade_unions_support
+		cost = 100
+		
+		available = { #使用条件
+			has_political_power> 99 #使用可能な政治力
+			NOT{has_war = yes}
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.5 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			##add_extra_state_shared_building_slots = 1 #スロット追加
+			
+			}
+			
+		days_remove = 60 #60日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			production_speed_industrial_complex_factor = 0.2
+			stability_factor = 0.015
+			consumer_goods_factor = 0.10
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+		
+		
+		
+		private_consignment_of_munitions = { #軍需品の民間委託
+		
+		icon = decision_eng_trade_unions_support
+		cost = 100
+		
+		available = { #使用条件
+			has_political_power> 99 #使用可能な政治力
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.2 #安定度20以上
+			}
+			
+		complete_effect = { #選択時の効果
+			send_equipment = {
+    		equipment = infantry_equipment
+    		amount = 500
+    		target = scope
+				}
+			}
+			
+		days_remove = 60 #60日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			industrial_capacity_factory = 0.15
+			consumer_goods_factor = 0.05
+			war_support_factor = 0.03
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		population_growth_policy = { #人口増加政策
+		
+		icon = decision_eng_trade_unions_support
+		cost = 150
+		
+		available = { #使用条件
+			has_political_power> 99 #使用可能な政治力
+			num_of_factories< 40 #工場数
+			NOT{has_war = yes}
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.7 #安定度70以上
+			
+			}
+			
+			
+			
+		days_remove = 365 #180日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			monthly_population = 0.25
+			consumer_goods_factor = 0.15
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			add_manpower = 1000000
+			
+			}
+			
+		}
+
+
+
+		focus_on_technical_research = { #技術研究に注力
+		
+		icon = decision_eng_trade_unions_support
+		cost = 150
+		
+		available = { #使用条件
+			has_political_power> 99 #使用可能な政治力
+			NOT{has_war = yes}
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.8 #安定度80以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			}
+			
+		days_remove = 180 #90日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			research_speed_factor = 0.1
+			consumer_goods_factor = 0.15
+			stability_factor = -0.10
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		acquisition_of_political_power = { #政治的権力の獲得
+		
+		icon = decision_eng_trade_unions_support
+		cost = 25
+		
+		available = { #使用条件
+			has_political_power> 5 #使用可能な政治力
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.5 #安定度50以上
+			}
+			
+		#complete_effect = { #選択時の効果
+			#war_support_factor = 0.05
+			#}
+			
+		days_remove = 90 #90日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			political_power_gain = 0.7
+			
+			war_support_weekly = -0.01
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+
+		nationalization_of_consumer_goods_factories = { #消費財工場の国有化
+		
+		icon = decision_eng_trade_unions_support
+		cost = 150
+		
+		available = { #使用条件
+			has_political_power> 99 #使用可能な政治力
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.2 #安定度20以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			random_owned_controlled_state = {
+
+                add_extra_state_shared_building_slots = 3
+            } #スロット追加
+			add_war_support = -0.15
+			}
+			
+		days_remove = 120 #120日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			
+			consumer_goods_factor = -0.1
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+			political_power_factor = -0.02
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		Public_opinion_manipulation = { #世論操作
+		
+		icon = decision_eng_trade_unions_support
+		cost = 100
+		
+		available = { #使用条件
+			has_political_power> 99 #使用可能な政治力
+			NOT{has_war = yes}
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.2 #安定度20以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			}
+			
+		days_remove = 190 #190日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			war_support_weekly = 0.03
+			political_power_factor = -0.02
+			autonomy_gain = 0.5
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+		
+		
+		Forced_production_increase_policy = { #強制生産増加政策
+		
+		icon = decision_eng_trade_unions_support
+		cost = 50
+		
+		available = { #使用条件
+			has_political_power> 49 #使用可能な政治力
+			NOT{has_war = no}
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.5 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			add_stability = -0.08
+			
+			}
+			
+		days_remove = 300		#60日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			civilian_factory_use = 5
+			
+			industrial_capacity_factory = 0.15
+			
+			political_power_gain = -0.25
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+		
+
+		Forced_production_increase_policy2 = { #強制生産増加政策
+		
+		icon = decision_eng_trade_unions_support
+		cost = 50
+		
+		available = { #使用条件
+			has_political_power> 49 #使用可能な政治力
+			NOT{has_war = no}
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.5 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			add_stability = -0.03
+			
+			}
+			
+		days_remove = 60		#60日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			civilian_factory_use = 3
+			
+			industrial_capacity_factory = 0.10
+			
+			political_power_gain = -0.15
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+		
+		
+		Acquisition_of_political_power = { #政治権力の買収
+		
+		icon = decision_eng_trade_unions_support
+		cost = 0
+		
+		available = { #使用条件
+			has_political_power> 10 #使用可能な政治力
+			
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.1 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			add_stability = -0.2
+			set_equipment_fraction = 0.9
+			}
+			
+		days_remove = 210		#60日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			drift_defence_factor = 0.25
+			
+			}
+			
+		remove_effect = { #終了後効果
+			
+			add_political_power = 350
+			
+			}
+			
+		}
+
+		Military_exercises = { #軍事演習
+		
+		icon = decision_eng_trade_unions_support
+		cost = 0
+		
+		available = { #使用条件
+			has_political_power> 10 #使用可能な政治力
+			
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.1 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			
+			army_experience = -100
+			}
+			
+		days_remove = 90		#60日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			experience_gain_army = 0.05
+			experience_gain_air = 0.05
+			experience_gain_navy = 0.05
+			}
+			
+		remove_effect = { #終了後効果
+			add_war_support = 0.05
+			add_threat = 5
+			}
+			
+		}
+
+		Peace_conference = { #平和会議
+		
+		icon = decision_eng_trade_unions_support
+		cost = 50
+		
+		available = { #使用条件
+			has_political_power> 10 #使用可能な政治力
+			
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.1 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			
+			
+			}
+			
+		days_remove = 90		#60日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			
+			}
+			
+		remove_effect = { #終了後効果
+			add_stability = 0.05
+			add_threat = -5
+			}
+			
+		}
+
+
+		Partisan_Suppression_Special_Budget = { #パルチザン鎮圧特別予算
+		
+		icon = decision_eng_trade_unions_support
+		cost = 25
+		
+		available = { #使用条件
+			has_political_power> 10 #使用可能な政治力
+			
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.1 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			set_equipment_fraction = 0.9
+			
+			
+			}
+			
+		days_remove = 365		#60日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			resistance_decay = 0.1
+			resistance_growth = -0.15
+			
+			}
+			
+		remove_effect = { #終了後効果
+			add_stability = 0.05
+			}
+			
+		}
+
+		Unification_of_overseas_territories = { #海外領地の統一
+		
+		icon = decision_eng_trade_unions_support
+		cost = 50
+		
+		available = { #使用条件
+			has_political_power> 10 #使用可能な政治力
+			
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.1 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			
+			
+			}
+			
+		days_remove = 365		#60日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			compliance_gain = 0.25
+			#compliance_growth = 0.1
+			}
+			
+		remove_effect = { #終了後効果
+			add_stability = -0.20
+			}
+			
+		}
+
+
+
+
+	}

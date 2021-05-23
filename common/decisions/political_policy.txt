@@ -1,0 +1,479 @@
+political_policy = {
+
+		communist_speech = { #共産主義者の演説
+		
+		icon = decision_eng_trade_unions_support
+		cost = 70
+		
+		available = { #使用条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.2 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			add_war_support = -0.05
+			}
+			
+		days_remove = 30 #30日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			
+			communism_drift = 0.1
+			industrial_capacity_factory = 0.05
+			Industrial_Capacity_Dockyard = 0.05
+			research_speed_factor = 0.05
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		democracy_speech = { #民主主義者の演説
+		
+		icon = decision_eng_trade_unions_support
+		cost = 70
+		
+		available = { #使用条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.2 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			add_war_support = -0.10
+			add_stability = 0.05
+			}
+			
+		days_remove = 30 #30日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			
+			democratic_drift = 0.1
+			political_power_gain = 0.5
+			research_speed_factor = 0.05
+			production_speed_industrial_complex_factor = 0.1
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		fascism_speech = { #国粋主義者の演説
+		
+		icon = decision_eng_trade_unions_support
+		cost = 70
+		
+		available = { #使用条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.2 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			add_war_support = 0.05
+			add_stability = -0.05
+			}
+			
+		days_remove = 30 #30日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			
+			fascism_drift = 0.1
+			monthly_population = 0.4
+			consumer_goods_factor = -0.05
+			production_speed_arms_factory_factor = 0.1
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+		royalist_speech = { #王党派の演説
+		
+		icon = decision_eng_trade_unions_support
+		cost = 70
+		
+		available = { #使用条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.2 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			}
+			
+		days_remove = 30 #30日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			war_support_weekly = 0.01
+			neutrality_drift = 0.1
+			political_power_gain = 0.25
+			research_speed_factor = -0.05
+			stability_weekly = 0.01
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		clergyman_speech = { #聖職者の演説
+		
+		icon = decision_eng_trade_unions_support
+		cost = 70
+		
+		available = { #使用条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		visible = { #可視条件
+			has_stability> 0.2 #安定度50以上
+			}
+			
+		complete_effect = { #選択時の効果
+			add_war_support = -0.05
+			add_stability = 0.15
+			}
+			
+		days_remove = 30 #30日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+		
+			consumer_goods_factor = -0.10
+			neutrality_drift = 0.1
+			political_power_gain = 0.95
+			justify_war_goal_time = 0.25
+			enemy_justify_war_goal_time = 0.25
+			research_speed_factor = -0.10
+			
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		militarist_supremacy = { #軍国至上主義
+		
+		icon = decision_eng_trade_unions_support
+		
+		
+		available = { #使用条件
+			
+			has_government = fascism
+			}
+			
+		visible = { #可視条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			}
+			
+		days_remove = 365 #365日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			
+			war_support_weekly = 0.01
+			mobilization_speed = 0.1
+			political_power_factor = 0.25
+			army_chief_cost_factor = -0.25
+			navy_chief_cost_factor = -0.25
+			air_chief_cost_factor = -0.25
+			justify_war_goal_time = -0.10
+			military_leader_cost_factor = -0.50
+			conscription = 0.03
+			consumer_goods_factor = -0.10
+			stability_weekly = 0.002
+			non_core_manpower = 0.04
+			resistance_decay = 0.1
+			resistance_growth = -0.15
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		unarmed_neutral_supremacy = { #非武装中立至上主義
+		
+		icon = decision_eng_trade_unions_support
+		
+		
+		available = { #使用条件
+			
+			has_government = democratic
+			
+			NOT = {has_decision = armed_neutral_supremacy }
+			NOT = {has_decision = interference_supremacy }
+			}
+			
+		visible = { #可視条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			}
+			
+		days_remove = 365 #365日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			
+			stability_weekly = 0.02
+			war_support_weekly = -0.01
+			mobilization_laws_cost_factor = 0.5
+			justify_war_goal_time = 0.5
+			enemy_justify_war_goal_time = 0.25
+			line_change_production_efficiency_factor = 0.5
+			industrial_capacity_factory = -0.2
+			industrial_capacity_dockyard = -0.2
+			local_building_slots_factor = 0.5
+			production_speed_industrial_complex_factor = 0.7
+			research_speed_factor = 0.2
+			production_speed_infrastructure_factor = 0.5
+			monthly_population = 0.50
+			compliance_growth = 0.2
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		armed_neutral_supremacy = { #武装中立至上主義
+		
+		icon = decision_eng_trade_unions_support
+		
+		
+		available = { #使用条件
+			
+			has_government = democratic
+			NOT = {has_decision = unarmed_neutral_supremacy }
+			NOT = {has_decision = interference_supremacy }
+			}
+			
+		visible = { #可視条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			}
+			
+		days_remove = 365 #365日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			
+			stability_weekly = 0.02
+			defensive_war_stability_factor = 0.4
+			justify_war_goal_time = 0.5
+			enemy_justify_war_goal_time = 0.5
+			conscription = 0.03
+			industrial_capacity_factory = 0.2
+			industrial_capacity_dockyard = 0.2
+			production_speed_buildings_factor = 0.2
+			
+			war_support_weekly = 0.0025
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+
+		interference_supremacy = { #干渉至上主義
+		
+		icon = decision_eng_trade_unions_support
+		
+		
+		available = { #使用条件
+			
+			has_government = democratic
+			NOT = {has_decision = unarmed_neutral_supremacy }
+			NOT = {has_decision = armed_neutral_supremacy }
+			}
+			
+		visible = { #可視条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			}
+			
+		days_remove = 365 #365日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			
+			war_support_weekly = 0.01
+			political_power_factor = 0.25
+			send_volunteer_divisions_required = -0.25
+			send_volunteers_tension = -0.20
+			justify_war_goal_time = -0.1
+			guarantee_cost = -0.5
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+			production_speed_buildings_factor = 0.1
+			research_speed_factor = 0.05
+			own_operative_detection_chance_factor = -0.1
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		international_supremacy = { #国際至上主義
+		
+		icon = decision_eng_trade_unions_support
+		
+		
+		available = { #使用条件
+			
+			has_government = communism
+			}
+			
+		visible = { #可視条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			}
+			
+		days_remove = 365 #365日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			
+			special_forces_cap = 0.1
+			mobilization_speed = 0.2
+			subversive_activites_upkeep = -0.1
+			foreign_subversive_activites = -0.50
+			conscription = 0.05
+			consumer_goods_factor = -0.05
+			monthly_population = 0.40
+			line_change_production_efficiency_factor = 0.2
+			global_building_slots_factor = 0.15
+			resistance_decay = 0.15
+			resistance_growth = -0.05
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+		royalist_supremacy = { #王党派至上主義
+		
+		icon = decision_eng_trade_unions_support
+		
+		
+		available = { #使用条件
+			
+			has_government = neutrality
+			}
+			
+		visible = { #可視条件
+			has_political_power> 0 #使用可能な政治力
+			}
+			
+		complete_effect = { #選択時の効果
+			
+			}
+			
+		days_remove = 365 #365日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			
+			special_forces_cap = 0.25
+			stability_weekly = 0.01
+			war_support_weekly = 0.01
+			political_power_gain = 0.5
+			conscription = 0.02
+			production_speed_buildings_factor = 0.1
+			production_factory_start_efficiency_factor = 0.40
+			local_building_slots_factor = 0.5
+			master_ideology_drift = 0.1
+			autonomy_gain_ll_to_subject_factor = -0.25
+			overlord_trade_cost_factor = -0.2
+			compliance_growth = 0.1
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+			
+		}
+
+
+	}

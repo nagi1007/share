@@ -1,0 +1,112 @@
+war_measures = {
+		war_speech ={ #戦争演説
+	icon = generic_propaganda
+	cost = 100
+	
+	available = { #使用条件
+		has_political_power> 5 #使用可能な政治力
+		}
+	
+	
+	visible = {
+		has_war = yes
+		}
+	complete_effect = { #選択時の効果
+			
+			}
+			
+		days_remove = 30 #30日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			war_support_weekly = 0.02
+			political_power_factor = 0.02
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+
+		}
+
+
+	territorial_claim ={ #領土請求
+	icon = generic_propaganda
+	cost = 100
+	
+	available = { #使用条件
+		has_political_power> 5 #使用可能な政治力
+		}
+	
+	
+	visible = {
+		has_war = yes
+		}
+	#complete_effect = { #選択時の効果
+			
+			
+			#}
+			
+		days_remove = 60 #60日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			war_support_weekly = 0.01
+			justify_war_goal_time = -0.15
+			political_power_factor = -0.03
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+
+		}
+
+
+		air_raid_measures ={ #空襲対策
+	icon = generic_propaganda
+	cost = 200
+	
+	available = { #使用条件
+		has_political_power> 199 #使用可能な政治力
+		}
+	
+	
+	visible = {
+		has_war = yes
+		}
+	#complete_effect = { #選択時の効果
+			
+			#}
+			
+		days_remove = 90 #90日間この間に継続効果が発動
+		
+		modifier = { #持続効果
+			industry_air_damage_factor = -0.15
+			industry_repair_factor = 0.2
+			stability_factor = 0.05
+			
+			}
+			
+		remove_effect = { #終了後効果
+		
+			
+			
+			}
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+	}

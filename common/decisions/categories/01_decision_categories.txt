@@ -1,0 +1,10 @@
+political_policy = {
+	icon = generic_economy
+
+}
+
+research_theory = {
+	icon = generic_economy
+
+}
+
